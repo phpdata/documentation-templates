@@ -124,7 +124,7 @@ Response code `201`
 
 Update a single user
 
-[POST] `/api/user/1`
+[PUT] `/api/user/1`
 
 ##### Request
 

@@ -6,4 +6,4 @@ Cross-project templates for (e.g.) API documentation
 
 # Table of Contents
 
-* [API Template](/api.md)
+* [RESTful API Template](/restful-api.md)

@@ -9,7 +9,7 @@ Brief description of `user` end-point
     * [Available Methods](#available-methods)
     * [Object](#object)
     * [Status Codes](#status-codes)
-* [Examples](#examples)
+* [Methods](#methods)
     * [GET List](#get-list-users)
     * [GET User](#get-a-single-user)
     * [POST User](#post-create-user)
@@ -57,7 +57,7 @@ Response status code used on this end point.
 
 - - -
 
-### Examples
+### Methods
 
 #### [GET] list users
 

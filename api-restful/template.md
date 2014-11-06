@@ -9,7 +9,7 @@ Brief description of end-point
     * [Available Methods](#available-methods)
     * [Object](#object)
     * [Status Codes](#status-codes)
-* [Examples](#examples)
+* [Methods](#methods)
     * [GET List](#get-list)
     * [GET Resource](#get-a-single-resource)
     * [POST Resource](#post-create-resource)
@@ -58,7 +58,7 @@ Response status code used on this end point.
 
 - - -
 
-### Examples
+### Methods
 
 #### [GET] list
 

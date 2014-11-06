@@ -25,7 +25,7 @@ Brief description of end-point
 
 ### Available methods
 
-`GET` / `POST` / `PUT`
+`GET` / `POST` / `PUT` / `DELETE` / `HEAD` / `PATCH` / `OPTIONS`
 
 ### Object
 
@@ -46,9 +46,14 @@ Response status code used on this end point.
 
 | Code | Description | Methods | Notes |
 | ---- | ----------- | ------- | ----- |
-| 200 | Success | GET / POST / PUT | OK |
+| 200 | Successful | GET / POST / PUT | OK |
 | 201 | Created successfully | POST | OK |
+| 204 | Successful | DELETE | OK but no content |
+| 304 | Not modified, can use cache | GET | Use cached version |
 | 400 | Invalid parameters | GET / POST / PUT | Response will contain error message. Update your request & try again |
+| 401 | Unauthorized | GET / POST / PUT / DELETE | Login & try again |
+| 403 | Forbidden | GET / POST / PUT / DELETE | You do not have permissions |
+| 404 | Not found | GET / POST / PUT / DELETE | Failed |
 | 500 | Internal Server Error | GET / POST / PUT | Failed |
 
 - - -

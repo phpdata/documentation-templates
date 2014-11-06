@@ -203,3 +203,25 @@ Should return the requesting object & errors for which field
         }
     }
 ```
+
+#### [DELETE] delete resource
+
+Delete a single resource
+
+[DELETE] `/uri/1`
+
+##### Request
+
+No body required
+
+##### Response
+
+Response code `204`
+
+Successful, no response returned. Response code is sufficient. 
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found

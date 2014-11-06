@@ -221,11 +221,10 @@ No body required
 
 Response code `204`
 
-No response returned. Response code is sufficient. 
+Successful, no response returned. Response code is sufficient.
 
 ##### Error Response (invalid request)
 
 Response code `404`
 
 Resource not found
-

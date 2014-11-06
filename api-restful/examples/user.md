@@ -137,6 +137,23 @@ Response code `201`
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+        "name": "Mickey Mouse",
+        "email": "mickey-mouse.com",
+        "errors": {
+            "email": "Invalid email address"
+        }
+    }
+```
+
 #### [PUT] update user
 
 Update a single user
@@ -167,4 +184,22 @@ Response code `200`
         "email": "mickey@mouse.com"
 	}
 
+```
+
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+	    "id": 1,
+        "name": "Mickey Mouse",
+        "email": "mickey-mouse.com",
+        "errors": {
+            "email": "Invalid email address"
+        }
+    }
 ```

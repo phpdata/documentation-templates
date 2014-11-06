@@ -136,6 +136,24 @@ Usually first property with be `id` with newly created value
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+        "key-name": {type},
+        ...
+        "errors": {
+            "key-name": "message"
+            ...
+        }
+    }
+```
+
 #### [PUT] update resource
 
 Update a single resource
@@ -164,5 +182,23 @@ Response code `200`
         ...
     }
 
+```
+
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+        "key-name": {type},
+        ...
+        "errors": {
+            "key-name": "message"
+            ...
+        }
+    }
 ```
 

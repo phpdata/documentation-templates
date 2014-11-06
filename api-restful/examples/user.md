@@ -8,11 +8,13 @@ Brief description of `user` end-point
     * [Uri](#uri)
     * [Available Methods](#available-methods)
     * [Object](#object)
-* [Examples](#examples)
+    * [Status Codes](#status-codes)
+* [Methods](#methods)
     * [GET List](#get-list-users)
     * [GET User](#get-a-single-user)
     * [POST User](#post-create-user)
     * [PUT User](#put-update-user)
+    * [DELETE Resource](#delete-resource)
     
 ---
 
@@ -38,9 +40,25 @@ Brief description of `user` end-point
 
 ```
 
+### Status Codes
+
+Response status code used on this end point.
+
+| Code | Description | Methods | Notes |
+| ---- | ----------- | ------- | ----- |
+| 200 | Successful | GET / POST / PUT | OK |
+| 201 | Created successfully | POST | OK |
+| 204 | Successful | DELETE | OK but no content |
+| 304 | Not modified, can use cache | GET | Use cached version |
+| 400 | Invalid parameters | GET / POST / PUT | Response will contain error message. Update your request & try again |
+| 401 | Unauthorized | GET / POST / PUT / DELETE | Login & try again |
+| 403 | Forbidden | GET / POST / PUT / DELETE | You do not have permissions |
+| 404 | Not found | GET / POST / PUT / DELETE | Failed |
+| 500 | Internal Server Error | GET / POST / PUT | Failed |
+
 - - -
 
-### Examples
+### Methods
 
 #### [GET] list users
 
@@ -120,6 +138,23 @@ Response code `201`
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+        "name": "Mickey Mouse",
+        "email": "mickey-mouse.com",
+        "errors": {
+            "email": "Invalid email address"
+        }
+    }
+```
+
 #### [PUT] update user
 
 Update a single user
@@ -151,3 +186,43 @@ Response code `200`
 	}
 
 ```
+
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+	    "id": 1,
+        "name": "Mickey Mouse",
+        "email": "mickey-mouse.com",
+        "errors": {
+            "email": "Invalid email address"
+        }
+    }
+```
+
+#### [DELETE] delete resource
+
+Delete a single resource
+
+[DELETE] `/uri/1`
+
+##### Request
+
+No body required
+
+##### Response
+
+Response code `204`
+
+Successful, no response returned. Response code is sufficient. 
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found

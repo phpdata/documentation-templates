@@ -8,11 +8,16 @@ Brief description of end-point
     * [Uri](#uri)
     * [Available Methods](#available-methods)
     * [Object](#object)
-* [Examples](#examples)
+    * [Status Codes](#status-codes)
+* [Methods](#methods)
     * [GET List](#get-list)
     * [GET Resource](#get-a-single-resource)
     * [POST Resource](#post-create-resource)
     * [PUT Resource](#put-update-resource)
+    * [DELETE Resource](#delete-resource)
+    * [PATCH Resource](#patch-partial-update-resource)
+    * [HEAD Resource](#head-get-resource)
+    * [OPTIONS Resource](#options-methods-available)
     
 ---
 
@@ -24,7 +29,7 @@ Brief description of end-point
 
 ### Available methods
 
-`GET` / `POST` / `PUT`
+`GET` / `POST` / `PUT` / `DELETE` / `PATCH` / `HEAD` / `OPTIONS`
 
 ### Object
 
@@ -37,9 +42,28 @@ Brief description of end-point
 
 ```
 
+### Status Codes
+
+Response status code used on this end point. 
+
+*Below are just some common examples, update accordingly for your end point*
+
+| Code | Description | Methods | Notes |
+| ---- | ----------- | ------- | ----- |
+| 200 | Successful | GET / POST / PUT | OK |
+| 201 | Created successfully | POST | OK |
+| 202 | Accepted by the server | POST / PUT | OK, usually used for async |
+| 204 | Successful | DELETE | OK but no content |
+| 304 | Not modified, can use cache | GET | Use cached version |
+| 400 | Invalid parameters | GET / POST / PUT | Response will contain error message. Update your request & try again |
+| 401 | Unauthorized | GET / POST / PUT / DELETE | Login & try again |
+| 403 | Forbidden | GET / POST / PUT / DELETE | You do not have permissions |
+| 404 | Not found | GET / POST / PUT / DELETE | Failed |
+| 500 | Internal Server Error | GET / POST / PUT | Failed |
+
 - - -
 
-### Examples
+### Methods
 
 #### [GET] list
 
@@ -117,6 +141,24 @@ Usually first property with be `id` with newly created value
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+        "key-name": {type},
+        ...
+        "errors": {
+            "key-name": "message"
+            ...
+        }
+    }
+```
+
 #### [PUT] update resource
 
 Update a single resource
@@ -147,3 +189,42 @@ Response code `200`
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	{
+        "key-name": {type},
+        ...
+        "errors": {
+            "key-name": "message"
+            ...
+        }
+    }
+```
+
+#### [DELETE] delete resource
+
+Delete a single resource
+
+[DELETE] `/uri/[id]`
+
+##### Request
+
+No body required
+
+##### Response
+
+Response code `204`
+
+Successful, no response returned. Response code is sufficient.
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found

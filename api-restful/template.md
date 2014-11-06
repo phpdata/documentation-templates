@@ -14,6 +14,10 @@ Brief description of end-point
     * [GET Resource](#get-a-single-resource)
     * [POST Resource](#post-create-resource)
     * [PUT Resource](#put-update-resource)
+    * [DELETE Resource](#delete-resource)
+    * [PATCH Resource](#patch-partial-update-resource)
+    * [HEAD Resource](#head-get-resource)
+    * [OPTIONS Resource](#options-methods-available)
     
 ---
 
@@ -25,7 +29,7 @@ Brief description of end-point
 
 ### Available methods
 
-`GET` / `POST` / `PUT` / `DELETE` / `HEAD` / `PATCH` / `OPTIONS`
+`GET` / `POST` / `PUT` / `DELETE` / `PATCH` / `HEAD` / `OPTIONS`
 
 ### Object
 
@@ -48,6 +52,7 @@ Response status code used on this end point.
 | ---- | ----------- | ------- | ----- |
 | 200 | Successful | GET / POST / PUT | OK |
 | 201 | Created successfully | POST | OK |
+| 202 | Accepted by the server | POST / PUT | OK, usually used for async |
 | 204 | Successful | DELETE | OK but no content |
 | 304 | Not modified, can use cache | GET | Use cached version |
 | 400 | Invalid parameters | GET / POST / PUT | Response will contain error message. Update your request & try again |
@@ -201,4 +206,26 @@ Should return the requesting object & errors for which field
         }
     }
 ```
+
+#### [DELETE] delete resource
+
+Delete a single resource
+
+[DELETE] `/uri/[id]`
+
+##### Request
+
+No body required
+
+##### Response
+
+Response code `204`
+
+No response returned. Response code is sufficient. 
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
 

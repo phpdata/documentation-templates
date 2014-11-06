@@ -14,6 +14,7 @@ Brief description of `user` end-point
     * [GET User](#get-a-single-user)
     * [POST User](#post-create-user)
     * [PUT User](#put-update-user)
+    * [DELETE Resource](#delete-resource)
     
 ---
 

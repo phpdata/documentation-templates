@@ -8,6 +8,7 @@ Brief description of `user` end-point
     * [Uri](#uri)
     * [Available Methods](#available-methods)
     * [Object](#object)
+    * [Status Codes](#status-codes)
 * [Examples](#examples)
     * [GET List](#get-list-users)
     * [GET User](#get-a-single-user)
@@ -37,6 +38,17 @@ Brief description of `user` end-point
 	}
 
 ```
+
+### Status Codes
+
+Response status code used on this end point.
+
+| Code | Description | Methods | Notes |
+| ---- | ----------- | ------- | ----- |
+| 200 | Success | GET / POST / PUT | OK |
+| 201 | Created successfully | POST | OK |
+| 400 | Invalid parameters | GET / POST / PUT | Response will contain error message. Update your request & try again |
+| 500 | Internal Server Error | GET / POST / PUT | Failed |
 
 - - -
 

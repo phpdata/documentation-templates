@@ -130,7 +130,7 @@ Create a single resource
 
 Response code `201`
 
-Usually first property with be `id` with newly created value 
+Usually first property will be `id` with newly created value 
 
 ```javascript
 

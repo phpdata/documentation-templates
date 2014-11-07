@@ -67,7 +67,7 @@ Response status code used on this end point.
 
 #### [GET] list
 
-Returns a collection of resoure objects
+Returns a collection of resource objects
 
 [GET] `/uri`
 

@@ -228,3 +228,15 @@ Successful, no response returned. Response code is sufficient.
 Response code `404`
 
 Resource not found
+
+#### [PATCH] Partial update resource
+
+Coming soon...
+
+#### [HEAD] Get resource
+
+Coming soon...
+
+#### [OPTIONS] Methods available
+
+Coming soon...

@@ -243,7 +243,8 @@ Coming soon...
 
 #### [HEAD] Get resource
 
-This is similar to a **GET** a single resource but no body is returned.
+This is similar to a **GET** a single resource but no body is returned. 
+An example of the use of this RESTful Vert, is to check weather a Resource has changed without actually get the Resource body (caching)
 
 [HEAD] `/uri/[id]`
 
@@ -260,6 +261,10 @@ NO BODY
 Response code `404`
 
 Resource not found
+
+```
+NO BODY
+```
 
 #### [OPTIONS] Methods available
 

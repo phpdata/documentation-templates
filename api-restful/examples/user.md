@@ -15,6 +15,9 @@ Brief description of `user` end-point
     * [POST User](#post-create-user)
     * [PUT User](#put-update-user)
     * [DELETE Resource](#delete-resource)
+    * [PATCH Resource](#patch-partial-update-resource)
+    * [HEAD Resource](#head-get-resource)
+    * [OPTIONS Resource](#options-methods-available)
     
 ---
 
@@ -262,6 +265,22 @@ Resource not found
 NO BODY
 ```
 
-#### [OPTIONS] Methods available
+[OPTIONS] `/uri`
 
-Coming soon...
+##### Response
+
+Response code `200`
+
+```javascript
+
+    [
+         'GET',
+         'POST',
+         'PUT',
+         'DELETE',
+         'PATCH',
+         'OPTIONS',
+         'HEAD'
+    ]
+
+```

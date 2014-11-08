@@ -268,4 +268,24 @@ NO BODY
 
 #### [OPTIONS] Methods available
 
-Coming soon...
+Returns a collection of **Verbs** allowed (available) on this Resource
+
+[OPTIONS] `/uri`
+
+##### Response
+
+Response code `200`
+
+```javascript
+
+    [
+         'GET',
+         'POST',
+         'PUT',
+         'DELETE',
+         'PATCH',
+         'OPTIONS',
+         'HEAD'
+    ]
+
+```

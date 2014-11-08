@@ -109,6 +109,12 @@ Response code `200`
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
+
 #### [POST] create resource
 
 Create a single resource
@@ -248,6 +254,12 @@ Response code `200`
 ```
 NO BODY
 ```
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
 
 #### [OPTIONS] Methods available
 

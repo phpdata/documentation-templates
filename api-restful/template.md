@@ -215,7 +215,9 @@ Delete a single resource
 
 ##### Request
 
-No body required
+```
+NO BODY
+```
 
 ##### Response
 
@@ -235,7 +237,17 @@ Coming soon...
 
 #### [HEAD] Get resource
 
-Coming soon...
+This is similar to a **GET** a single resource but no body is returned.
+
+[HEAD] `/uri/[id]`
+
+##### Response
+
+Response code `200`
+
+```
+NO BODY
+```
 
 #### [OPTIONS] Methods available
 

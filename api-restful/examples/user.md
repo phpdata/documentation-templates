@@ -107,6 +107,12 @@ Response code `200`
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
+
 #### [POST] create user
 
 Create a single user
@@ -226,3 +232,31 @@ Successful, no response returned. Response code is sufficient.
 Response code `404`
 
 Resource not found
+
+#### [PATCH] Partial update resource
+
+Coming soon...
+
+#### [HEAD] Get resource
+
+This is similar to a **GET** a single resource but no body is returned.
+
+[HEAD] `/uri/1`
+
+##### Response
+
+Response code `200`
+
+```
+NO BODY
+```
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
+
+#### [OPTIONS] Methods available
+
+Coming soon...

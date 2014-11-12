@@ -239,7 +239,56 @@ Resource not found
 
 #### [PATCH] Partial update resource
 
-Coming soon...
+[PATCH] `/uri/[id]`
+
+Note the `/` in the replacing key field name (json pointer).
+
+```javascript
+
+	[
+	    {
+	        "replace": "/{field-name}",
+            "value": {type}
+        },
+        ...
+    ]
+```
+
+##### Response
+
+Response code `200`
+
+```javascript
+
+	[
+	    {
+	        "replace": "/{field-name}",
+            "value": {type}
+        },
+        ...
+    ]
+```
+
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	[
+	    {
+	        "replace": "/{field-name}",
+            "value": {type},
+            "errors": [
+                "message"
+                ...
+            ]
+        },
+        ...
+    ]
+```
 
 #### [HEAD] Get resource
 

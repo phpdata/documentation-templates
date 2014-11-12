@@ -15,6 +15,9 @@ Brief description of `user` end-point
     * [POST User](#post-create-user)
     * [PUT User](#put-update-user)
     * [DELETE Resource](#delete-resource)
+    * [PATCH Resource](#patch-partial-update-resource)
+    * [HEAD Resource](#head-get-resource)
+    * [OPTIONS Resource](#options-methods-available)
     
 ---
 
@@ -106,6 +109,12 @@ Response code `200`
 	}
 
 ```
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
 
 #### [POST] create user
 
@@ -226,3 +235,52 @@ Successful, no response returned. Response code is sufficient.
 Response code `404`
 
 Resource not found
+
+#### [PATCH] Partial update resource
+
+Coming soon...
+
+#### [HEAD] Get resource
+
+This is similar to a **GET** a single resource but no body is returned.
+An example of the use of this RESTful Vert, is to check weather a Resource has changed without actually get the Resource body (caching)
+
+[HEAD] `/uri/1`
+
+##### Response
+
+Response code `200`
+
+```
+NO BODY
+```
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
+
+```
+NO BODY
+```
+
+[OPTIONS] `/uri`
+
+##### Response
+
+Response code `200`
+
+```javascript
+
+    [
+         'GET',
+         'POST',
+         'PUT',
+         'DELETE',
+         'PATCH',
+         'OPTIONS',
+         'HEAD'
+    ]
+
+```

@@ -109,6 +109,12 @@ Response code `200`
 
 ```
 
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
+
 #### [POST] create resource
 
 Create a single resource
@@ -215,7 +221,9 @@ Delete a single resource
 
 ##### Request
 
-No body required
+```
+NO BODY
+```
 
 ##### Response
 
@@ -228,3 +236,105 @@ Successful, no response returned. Response code is sufficient.
 Response code `404`
 
 Resource not found
+
+#### [PATCH] Partial update resource
+
+[PATCH] `/uri/[id]`
+
+Note the `/` in the replacing key field name (json pointer).
+
+```javascript
+
+	[
+	    {
+	        "replace": "/{field-name}",
+            "value": {type}
+        },
+        ...
+    ]
+```
+
+##### Response
+
+Response code `200`
+
+```javascript
+
+	[
+	    {
+	        "replace": "/{field-name}",
+            "value": {type}
+        },
+        ...
+    ]
+```
+
+##### Error Response (invalid request)
+
+Response code `400`
+
+Should return the requesting object & errors for which field 
+
+```javascript
+
+	[
+	    {
+	        "replace": "/{field-name}",
+            "value": {type},
+            "errors": [
+                "message"
+                ...
+            ]
+        },
+        ...
+    ]
+```
+
+#### [HEAD] Get resource
+
+This is similar to a **GET** a single resource but no body is returned. 
+An example of the use of this RESTful Vert, is to check weather a Resource has changed without actually get the Resource body (caching)
+
+[HEAD] `/uri/[id]`
+
+##### Response
+
+Response code `200`
+
+```
+NO BODY
+```
+
+##### Error Response (invalid request)
+
+Response code `404`
+
+Resource not found
+
+```
+NO BODY
+```
+
+#### [OPTIONS] Methods available
+
+Returns a collection of **Verbs** allowed (available) on this Resource
+
+[OPTIONS] `/uri`
+
+##### Response
+
+Response code `200`
+
+```javascript
+
+    [
+         'GET',
+         'POST',
+         'PUT',
+         'DELETE',
+         'PATCH',
+         'OPTIONS',
+         'HEAD'
+    ]
+
+```

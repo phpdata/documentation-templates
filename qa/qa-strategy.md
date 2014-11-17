@@ -12,7 +12,7 @@
         * [Module](#module)
         * [API](#api)
         * [UI](#ui)
-    * [Smoke test](#smoke-test]
+    * [Smoke test](#smoke-test)
 * [Non-functional testing](#nfr)
     * [Load testing](#load)
     * [Web accessibility](#wcag)

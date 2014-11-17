@@ -110,7 +110,7 @@ Test client(s): Goutte, PhantomJS, Firefox, Internet Explorer
 
 ### Smoke Test
 
-The smoke test comprises of both select historical scenario tests, and current ones (i.e. from the current Sprint).  This test set can be run at any time, but usually against master branch or qualified CI Build. A smoke test will be done on Master code branch regualrly, and on branches on demand – ie. Test automation should be integrated into the build process.
+The smoke test comprises of both select historical scenario tests, and current ones (i.e. from the current Sprint).  This test set can be run at any time, but usually against master branch or qualified CI Build. A smoke test will be done on Master code branch regualrly, and on branches on demand – ie. Test automation should be integrated into the CI build process.
 
 
 ## Non-functional testing

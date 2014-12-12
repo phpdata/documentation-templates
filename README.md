@@ -8,3 +8,6 @@ Cross-project templates for (e.g.) API documentation
 
 * [RESTful API Template](/api-restful/template.md)
     * [RESTful Example](/api-restful/examples/user.md)
+* Contributions
+    * [Contributing Template](/contributions/Contributing.md)
+    * [Review Template](/contributions/Review.md)

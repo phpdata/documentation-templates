@@ -32,4 +32,4 @@ Return to [Table of Contents](/README.md#table-of-contents)
 | Quality | - BADGE - SEE SCREENSHOT BELOW - |
 ```
 
-![MarkDown Badges](/contributing/assets/badges.png "MarkDown Badges")
+![MarkDown Badges](/contributions/assets/badges.png "MarkDown Badges")

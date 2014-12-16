@@ -16,6 +16,7 @@
         * [ ] IE (each project should specify versions)
             * [ ] 7
             * [ ] 8
+            * [ ] 9
             * [ ] 10
 2. Team manual verification that **feature** has been deployed & works as expected
     * [ ] on `develop` environment

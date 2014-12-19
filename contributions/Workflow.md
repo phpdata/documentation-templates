@@ -1,6 +1,6 @@
-# Developer Pipeline
+# Developer/Tester Workflow
 
-### Development (inc. automated testing)
+### Development / Automated testing (Team member)
 
 **Key**
 - Github: Code repository
@@ -11,7 +11,7 @@
 
 ![Alt text](http://g.gravizo.com/g?
 @startuml;
-actor Developer;
+actor Member;
 participant "Feature/Bug/Tests" as DEVELOPER;
 participant "Local Dev ENV" as LOCAL;
 participant "Comms" as COMMS;
@@ -19,7 +19,7 @@ participant "Github" as GITHUB;
 participant "CI" as CI;
 participant "Hosting" as HOSTING;
 participant "Static Code Analysis" as ANALYSIS;
-Developer -> DEVELOPER: Code;
+Member -> DEVELOPER: Code;
 activate DEVELOPER;
 DEVELOPER -> LOCAL: Do Work;
 activate LOCAL;
@@ -46,7 +46,7 @@ deactivate GITHUB;
 COMMS --> DEVELOPER: Notification;
 deactivate COMMS;
 deactivate LOCAL;
-DEVELOPER --> Developer: Done;
+DEVELOPER --> Member: Done;
 deactivate DEVELOPER;
 @enduml
 )

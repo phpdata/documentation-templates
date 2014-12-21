@@ -1,16 +1,17 @@
 # Spike
 
-A Spike, also known as a `Proof of Concept` (POC), should have the following:
+A *Spike* is a *Story*, with the normal `story` attributes (estimateable, demonstrable, etc), and therefore fits into a *Sprint* just like other *Story*.
 
-* Objective: Clear single objective
-* Documentation: Results of Spike should be documented
-  * What worked & why
-  * What didnt work why
-  * Assumptions
-  * Not covered & why
-* Review: Peer review that the objective has been achieved with a clear result
-  * Code quality is NOT part of this review
-* [optional] demo
-* Code: should be in a branch & **never** merged in
+POC is one type of Spike. Spikes are there to remove uncertainty, such as doing part of a solution in order to be able to correctly estimate it (so it wouldn't necessarily be throwaway), or might be non-code (wireframes to explore UI options).
 
-*Note: This code is throw away, therefore it only needs to demostrate the `objective`*
+On completion of a Spike, a `Pull Request` should be created & then **closed** once reviewed (therefore kept). It should have the following information in the description:
+
+| Objective | Single clear goal |
+| --------- | ----------------- |
+| Type | POC (throw away) / Code / Research / Wireframe  |
+| Exclusions | What is **NOT** included |
+| Assumptions | ~ |
+| Dependencies | ~ |
+| Documentation | What worked, what didnt, why |
+| Review | Pear review on Goal |
+| Demo | success / failure |

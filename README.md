@@ -12,3 +12,4 @@ Cross-project templates for (e.g.) API documentation
     * [Contributing Template](/contributions/Contributing.md)
     * [Review Template](/contributions/Review.md)
 * [Definition of Done](/definition-of-done.md)
+* [Spike](/spike.md)

@@ -6,7 +6,7 @@ POC is one type of Spike. Spikes are there to remove uncertainty, such as doing 
 
 On completion of a Spike, a `Pull Request` should be created & then **closed** once reviewed (therefore kept). It should have the following information in the description:
 
-| Idea | Details |
+| Item | Detail |
 | ---- | ------- |
 | Objective | Single clear goal |
 | Type | POC (throw away) / Code / Research / Wireframe  |

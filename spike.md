@@ -13,6 +13,6 @@ On completion of a Spike, a `Pull Request` should be created & then **closed** o
 | Exclusions | What is **NOT** included |
 | Assumptions | ~ |
 | Dependencies | ~ |
-| Documentation | What worked, what didnt, why |
+| Documentation | What worked, what didn't, why |
 | Review | Pear review on Goal |
 | Demo | success / failure |

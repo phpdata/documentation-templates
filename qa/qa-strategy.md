@@ -116,7 +116,7 @@ TBD
 
 #### API tests
 
-Functional testing of underlying services, which is not dependant on a completed UI, but scenarios can usually be covered is RESTful services are being used.
+Functional testing of underlying services, which is not dependant on a completed UI, but scenarios can usually covered if RESTful services are being used.
 
 Test client(s): Guzzle
 
@@ -151,7 +151,7 @@ TBD
 
 A good impact of a structured test automation appraoch, is test code depends on front-end coding standards. The majority of WCAG issues are around front-end coding standards, but also recommended is:-
 
-* Observing ood coding standards in HTML and CSS, most major WCAG issues can be avoided. 
+* Observing good coding standards in HTML and CSS, most major WCAG issues can be avoided. 
 * Time should be allocated for formal evaluation to ensure Level A standards across the site.
 * Regular checks by the team using browser emulation or CLI tools to validate code.
 * UI Designers should refer to scenarios for naming convention of html elements

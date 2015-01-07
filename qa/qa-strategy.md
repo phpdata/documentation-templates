@@ -69,8 +69,8 @@ An issue can be a user story, a feature, a bug, an improvement or a task - and a
 
 1. Issue Defined
 2. Issue reviewed/scheduled
-2. Test Automation task created (if relevant)
-3. Developer tasks/sub-tasks created (front-end and back-end)
+3. Test Automation task created (if relevant)
+4. Developer tasks/sub-tasks created (front-end and back-end)
 
 #### Note: ALL issues of any type should link to a User Story issue, either by creating a sub-task under story, or linking
 

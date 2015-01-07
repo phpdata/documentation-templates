@@ -1,4 +1,4 @@
-# QA Strategy
+# QA Strategy (BDD)
 
 #### Page Navigation
 
@@ -49,26 +49,46 @@ BDD is not so much about "how do I code this?", as "how do I test this?", i.e. b
 
 By using an abstracted executable natural programming language (e.g. Gherkin), the scenarios which are also the (automated) acceptance tests. If the spec changes, then so does the test, and flagged up as a fail in the CI Build process. A very self-maintaining system is setp and maintained.
 
-The Scenarios do not replace development tasks, but they do give development a clearer path to to translate features into code. BDD effectively addresses the problems with traceability from user story to code, by shortening the path, and introducing control to development and testing signoff process.  BDD can operate within any project methodology, with Scrum and/or Kanban the most commonly applied.
+The scenarios do not replace development tasks, but they do give development a clearer path to to translate features into code. BDD effectively addresses the problems with traceability from user story to code, by shortening the path, and introducing control to development and testing signoff process.  BDD can operate within any project methodology, with Scrum and/or Kanban the most commonly applied.
 
 
 ### Features/Scenarios
 
-Development is driven by Features and the scenarios.  A feature can be very simple, but a pragmatic approach is a user story style heading,followed by 1 or many scenarios (depending on story scope) to break down the feature into alternate flows. These are usually defined by the Product Owner and/or Business Analyst, by consensus with development ipnut.  While it is easy to specify a line such as "I log in as 'xyz' with password 'zyx'", this would entail several backend and frontend tasks to fully complete the feature.  Therefore it is essential that scenarios are defined by the team by consensus, and that scenario context in continual QA – treating your DSL as code, will help prevent DSL library bloat.
+Development is driven by features and the scenarios.  A user story commonly maps to one feature - if a user story is complex, it can have more than one feature to brak down the user story into in better sized parts, but sometimes more. 
+
+A feature can be very simple, but a pragmatic approach is a user story style heading,followed by 1 or many scenarios (depending on story scope) to break down the feature into alternate flows. These are usually defined by the Product Owner and/or Business Analyst, by consensus with development ipnut.  While it is easy to specify a line such as "I log in as 'xyz' with password 'zyx'", this would entail several backend and frontend tasks to fully complete the feature.  Therefore it is essential that scenarios are defined by the team by consensus, and that scenario context in continual QA – treating your DSL as code, will help prevent DSL library bloat.
 
 Development and QA will review scenarios for completeness, and check matches agreed specification format (Gherkin is the common base BDD specification language, but it's roots are in DSL). UI Developers will need to reference scenarios, as they will include html element name definitions
 
-"Ready for Sprint" is status cue, that scenarios are complete.
+A user story is considered as "delivered", when all agreed scenarios within user story are complete.  This does not mean, however that user stories are closed, as Agile promotoes idea of continuous improvement, so user stories mature and develop as the project progresses.
 
+
+### Issue Workflow
+
+An issue can be a user story, a feature, a bug, an improvement or a task - and any other issue type you choose to use.  Following that viewpoint, then an all issues need the same approach when it comes to issue workflow.
+
+1. Issue Defined
+2. Issue reviewed/scheduled
+2. Test Automation task created (if relevant)
+3. Developer tasks/sub-tasks created (front-end and back-end)
+
+#### Note: ALL issues of any type should link to a User Story issue, either by creating a sub-task under story, or linking
+
+Any changes to user story issues should be added to the Gherkin directly, to esnure all are working towards same user story goal (i.e. minimise risk of scope creep or scope inaccuracies).
+
+Bugs should be recorded against a user story, to ensure firstly that bug is relevant in terms of project scope, and also 
 
 ### Building a language
 
 Beginning to specify in an agreed format, means effectively developing a language (commonly called a domain-specific language rr DSL), and it should be maintained as such. This means it is imperative to get scenarios clear and comprehensive, and reviewed regularly, as features should not be counted as "Done", until all scenario tests pass. 
 
-
 ## Testing Approach
 
-The testing approach will be driven by the BDD (Behaviour Driven Development), which determines test criteria and scope. In BDD there is essnetially no difference between aim of development and testing, which is a "green" scenario then a "green" feature. Development is driven by scenarios defined by the team, and mocks/stubs used in tests, where no UI or integration point exists.  With use of headless browser test software, it will be possible to test the functionality in end-to-end fashion, without full UI, as long as http requests and/or RESTful api services are available.. 
+The testing approach will be driven by the BDD (Behaviour Driven Development), which determines test criteria and scope. 
+
+In BDD there is essentially no difference between aim of development and testing, 
+which is a completed user story. Development is driven by scenarios defined by the team, 
+and mocks/stubs used in tests, where no UI or integration point exists.  With use of headless browser test software, it will be possible to test the functionality in end-to-end fashion, without full UI, as long as http requests and/or RESTful api services are available.. 
 
 
 When a QA goes to test a new feature, they will do three things:
@@ -82,7 +102,7 @@ When a QA goes to test a new feature, they will do three things:
 
 ### Functional Testing tiers
 
-There are 4 tiers of tests for features files (though not all are relevant) – they are Unit, Module, API and UI.  These tests all run within the same test framework (Behat/Mink).
+There are 4 tiers of tests for features files (though not all are relevant) – they are Unit, Module, API and UI.
 
 All relevant test code must be completed for a feature, to enable a BDD fail.
 
@@ -96,7 +116,7 @@ TBD
 
 #### API tests
 
-Functional testing of underlying services, which is not dependant on a completed UI, but scenarios can usually be covered if RESTful services are being used.
+Functional testing of underlying services, which is not dependant on a completed UI, but scenarios can usually be covered is RESTful services are being used.
 
 Test client(s): Guzzle
 
@@ -131,7 +151,7 @@ TBD
 
 A good impact of a structured test automation appraoch, is test code depends on front-end coding standards. The majority of WCAG issues are around front-end coding standards, but also recommended is:-
 
-* Observing good coding standards in HTML and CSS, most major WCAG issues can be avoided. 
+* Observing ood coding standards in HTML and CSS, most major WCAG issues can be avoided. 
 * Time should be allocated for formal evaluation to ensure Level A standards across the site.
 * Regular checks by the team using browser emulation or CLI tools to validate code.
 * UI Designers should refer to scenarios for naming convention of html elements
@@ -208,4 +228,3 @@ TBD
         When I press "Save"
         And I wait for page to update
         Then I should see "Thankyou, we will respond soon"
-
